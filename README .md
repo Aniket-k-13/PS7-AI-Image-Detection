@@ -79,6 +79,9 @@ Grad-CAM highlights the exact pixel regions that influenced the decision.
 Common AI artifacts detected: unnatural texture repetition, blurring at boundaries, inconsistent lighting, unnaturally smooth surfaces.
 
 ---
+<img width="949" height="1965" alt="image" src="https://github.com/user-attachments/assets/06e52cb1-26b6-4cd4-8912-099c49309241" />
+
+
 
 ## 📁 Project Structure
 
