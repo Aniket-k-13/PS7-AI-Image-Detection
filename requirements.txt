@@ -1,12 +1,9 @@
 streamlit==1.28.0
-
 torch
 torchvision
 timm
-
 numpy
 matplotlib
 scikit-learn
 pillow
-
 gdown
