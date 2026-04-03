@@ -3,7 +3,5 @@ torch
 torchvision
 timm
 numpy
-matplotlib
-scikit-learn
-pillow
+opencv-python-headless
 gdown
