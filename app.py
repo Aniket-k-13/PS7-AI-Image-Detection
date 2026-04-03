@@ -6,7 +6,6 @@ import numpy as np
 import cv2
 import gdown
 import os
-from torchvision import transforms
 
 # ============================
 # MODEL
@@ -36,14 +35,6 @@ DEVICE = torch.device("cpu")
 CLASSES = ["FAKE", "REAL"]
 IMG_SIZE = 224
 
-tf = transforms.Compose([
-    transforms.ToPILImage(),
-    transforms.Resize((IMG_SIZE, IMG_SIZE)),
-    transforms.ToTensor(),
-    transforms.Normalize([0.485, 0.456, 0.406],
-                         [0.229, 0.224, 0.225])
-])
-
 # ============================
 # MODEL LOADING
 # ============================
@@ -61,13 +52,30 @@ def load_model():
     return model
 
 # ============================
+# IMAGE PREPROCESS (MANUAL)
+# ============================
+def preprocess(img):
+    img = cv2.resize(img, (IMG_SIZE, IMG_SIZE))
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    img = img / 255.0
+
+    mean = np.array([0.485, 0.456, 0.406])
+    std = np.array([0.229, 0.224, 0.225])
+    img = (img - mean) / std
+
+    img = np.transpose(img, (2, 0, 1))
+    img = np.expand_dims(img, axis=0)
+
+    return torch.tensor(img, dtype=torch.float32)
+
+# ============================
 # UI
 # ============================
-st.title("🔍 AI Image Detector (Stable Version)")
-st.write("Works on Python 3.14 (No Pillow issues)")
+st.title("🔍 AI Image Detector (FINAL FIXED VERSION)")
+st.write("No Pillow. No torchvision. Works on Python 3.14.")
 
 model = load_model()
-st.success("Model Loaded")
+st.success("✅ Model Loaded")
 
 uploaded = st.file_uploader("Upload Image", type=["jpg","png","jpeg"])
 
@@ -77,8 +85,7 @@ if uploaded:
 
     st.image(img, channels="BGR")
 
-    img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-    tensor = tf(img_rgb).unsqueeze(0)
+    tensor = preprocess(img)
 
     with torch.no_grad():
         output = model(tensor)
@@ -88,6 +95,6 @@ if uploaded:
     confidence = probs[pred] * 100
 
     if CLASSES[pred] == "FAKE":
-        st.error(f"FAKE — {confidence:.2f}%")
+        st.error(f"🔴 FAKE — {confidence:.2f}%")
     else:
-        st.success(f"REAL — {confidence:.2f}%")
+        st.success(f"🟢 REAL — {confidence:.2f}%")
