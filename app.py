@@ -52,10 +52,20 @@ tf = transforms.Compose([
 ])
 
 
+import gdown
+import os
+
+MODEL_PATH = "model.pth"
+
 @st.cache_resource
-def load_model(model_path):
+def load_model():
+    # Download model if not present
+    if not os.path.exists(MODEL_PATH):
+        url = "https://drive.google.com/uc?id=YOUR_FILE_ID"
+        gdown.download(url, MODEL_PATH, quiet=False)
+
     model = HybridEffNetViT(num_classes=2).to(DEVICE)
-    model.load_state_dict(torch.load(model_path, map_location=DEVICE))
+    model.load_state_dict(torch.load(MODEL_PATH, map_location=DEVICE))
     model.eval()
     return model
 
@@ -102,8 +112,6 @@ st.markdown("---")
 st.sidebar.header("⚙️ Model Setup")
 st.sidebar.markdown("Upload your trained `.pth` model file to get started.")
 
-model_file = st.sidebar.file_uploader("Upload model (.pth)", type=["pth"])
-
 st.sidebar.markdown("---")
 st.sidebar.markdown("### 📊 Model Info")
 st.sidebar.markdown("""
@@ -124,30 +132,24 @@ st.sidebar.markdown(
 # ============================
 # MAIN CONTENT
 # ============================
-if model_file is None:
-    st.info("👈 Upload your trained model (.pth) in the sidebar to begin.")
+st.markdown("### 🧠 How it works")
+col1, col2, col3 = st.columns(3)
 
-    # Show architecture diagram as text
-    st.markdown("### 🧠 How it works")
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        st.markdown("#### 1️⃣ EfficientNet-B0")
-        st.markdown("Scans for **local texture artifacts** — blurring, noise patterns, and GAN fingerprints at the pixel level.")
-    with col2:
-        st.markdown("#### 2️⃣ ViT-Base/16")
-        st.markdown("Checks **global structure** — wrong proportions, misaligned shadows, context inconsistencies.")
-    with col3:
-        st.markdown("#### 3️⃣ Grad-CAM")
-        st.markdown("Highlights **exactly where** the fake artifacts were found in the image with a heatmap.")
-    st.stop()
+with col1:
+    st.markdown("#### 1️⃣ EfficientNet-B0")
+    st.markdown("Scans for **local texture artifacts** — blurring, noise patterns, and GAN fingerprints.")
+
+with col2:
+    st.markdown("#### 2️⃣ ViT-Base/16")
+    st.markdown("Checks **global structure** — wrong proportions, misaligned shadows.")
+
+with col3:
+    st.markdown("#### 3️⃣ Grad-CAM")
+    st.markdown("Highlights **artifact regions** with heatmaps.")
 
 # Save model to temp file
-import tempfile
-with tempfile.NamedTemporaryFile(delete=False, suffix=".pth") as tmp:
-    tmp.write(model_file.read())
-    tmp_path = tmp.name
 
-model = load_model(tmp_path)
+model = load_model()
 st.sidebar.success(f"✅ Model loaded ({DEVICE})")
 
 # ============================
