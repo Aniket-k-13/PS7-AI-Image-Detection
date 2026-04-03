@@ -5,8 +5,9 @@ torchvision
 timm
 
 numpy
-pillow
 matplotlib
 scikit-learn
+
+pillow==10.0.1   # ✅ FIXED VERSION (IMPORTANT)
 
 gdown
