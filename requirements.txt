@@ -7,7 +7,6 @@ timm
 numpy
 matplotlib
 scikit-learn
-
-pillow==10.0.1   # ✅ FIXED VERSION (IMPORTANT)
+pillow
 
 gdown
