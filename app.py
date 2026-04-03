@@ -5,9 +5,9 @@ import timm
 import numpy as np
 from PIL import Image
 from torchvision import transforms
-from pytorch_grad_cam import GradCAM
-from pytorch_grad_cam.utils.image import show_cam_on_image
-from pytorch_grad_cam.utils.model_targets import ClassifierOutputTarget
+#from pytorch_grad_cam import GradCAM
+#from pytorch_grad_cam.utils.image import show_cam_on_image
+#from pytorch_grad_cam.utils.model_targets import ClassifierOutputTarget
 import matplotlib.pyplot as plt
 import io
 import os
@@ -79,12 +79,12 @@ def predict(model, img_pil):
     return pred, probs, tensor
 
 
-def get_gradcam(model, tensor, pred):
+'''def get_gradcam(model, tensor, pred):
     target_layer  = [model.eff.conv_head]
     cam           = GradCAM(model=model, target_layers=target_layer)
     targets       = [ClassifierOutputTarget(pred)]
     grayscale_cam = cam(input_tensor=tensor, targets=targets)[0]
-    return grayscale_cam
+    return grayscale_cam'''
 
 
 # ============================
