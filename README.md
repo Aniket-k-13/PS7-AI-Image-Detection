@@ -1,4 +1,4 @@
-# 🔍 PS7 — AI-Generated Image Detection & Artifact Identification
+<img width="1188" height="390" alt="image" src="https://github.com/user-attachments/assets/466951ff-5b4e-458e-8476-810b82a9f118" /># 🔍 PS7 — AI-Generated Image Detection & Artifact Identification
 ### Neural Nexus AI/ML Hackathon 2026
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
@@ -20,6 +20,17 @@ Advancements in generative AI have enabled the creation of highly realistic synt
 
 ---
 
+## ⚙️ Model Loading
+Due to size limitations, the trained model is hosted on Google Drive and automatically downloaded during app startup.
+
+## 🚀 Live Demo
+https://yourapp.streamlit.app
+
+## ⚙️ Model Loading
+Model is automatically downloaded from Google Drive on first run.
+
+
+⚠️ First run may take ~30 seconds.
 ## 🏆 Results
 
 | Metric | Score |
@@ -180,6 +191,23 @@ Source: [Kaggle — birdy654/cifake](https://www.kaggle.com/datasets/birdy654/ci
 | **Hybrid EffNet+ViT (ours)** | **98.58%** | **0.9854** | **0.9989** |
 
 ---
+
+## 📊 Visual Results
+
+Below are key outputs from training:
+
+- Training & ROC curves
+  <img width="1188" height="390" alt="image" src="https://github.com/user-attachments/assets/30113e43-9914-4cc1-84ac-912522a62450" />
+<img width="590" height="590" alt="image" src="https://github.com/user-attachments/assets/f3648891-0760-4f5a-a294-fe9cbdb17e9e" />
+
+- Confusion matrix
+  <img width="492" height="484" alt="image" src="https://github.com/user-attachments/assets/0c4d5cb8-d66f-4d58-b149-7c2b2adb3622" />
+
+- Grad-CAM visualizations
+  <img width="949" height="1965" alt="image" src="https://github.com/user-attachments/assets/1e76f85a-b394-44ea-8704-ca37df85c66f" />
+
+
+> Full outputs are available inside the notebook.
 
 ## 📚 Citations
 
