@@ -11,11 +11,19 @@
 
 ## 🚀 Live Demo
 
-**👉 [Try it here — aniketkhandare/ai-image-detector](https://huggingface.co/spaces/aniketkhandare/ai-image-detector)**
+## 🧪 Test the Model — Google Colab Demo
 
-Upload any image and get an instant prediction with confidence score.
+No installation needed. Just open and run:
 
-Note: deployment is still in process but the side of model is huge the free tier cpu and ram is not enough to host the model, we have to say regratelly we are not host it now 
+👉 **[Open Demo Notebook in Colab](https://drive.google.com/file/d/143tXRwb6RR6MIuiRiXSSXCWuIqE_6PBY/view?usp=sharing)**
+
+Steps:
+1. Runtime → Change runtime type → T4 GPU
+2. Run all cells in order
+3. Upload any image in Cell 3 (u can use any image to text the model just go to any ai platform genrate any image and give it our model, also u can take few random photos from ur phone camera and give it to our model, it will accuratel detectect if the image is real or ai genrated}
+4. Get instant prediction!
+
+Model downloads automatically (~364MB, ~1 min).
 
 ---
 
