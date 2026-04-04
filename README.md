@@ -10,6 +10,7 @@
 ---
 
 ## 🚀 Live Demo
+👉 https://huggingface.co/spaces/aniketkhandare/ai_image_detector
 
 ## 🧪 Test the Model — Google Colab Demo
 
