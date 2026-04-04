@@ -1,8 +1,6 @@
-streamlit
+gradio
 torch
 torchvision
 timm
 Pillow
 numpy
-scikit-learn
-matplotlib
