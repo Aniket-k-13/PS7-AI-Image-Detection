@@ -14,6 +14,9 @@
 
 This is our live deployed model — open the link and test it yourself! Upload any image to see if it's real or AI-generated. Try it two ways: go to any AI image generator (Midjourney, DALL-E, Stable Diffusion) and generate an image, then upload it to our model. Or take a few photos with your phone camera and upload those. The model will accurately tell you whether each image is **REAL** or **AI-GENERATED** along with a confidence score. No setup needed — just open the link and upload.
 
+##limitation
+"The model achieves 98.58% on the CIFAKE benchmark. However, CIFAKE contains 32×32 pixel images of objects — not high-resolution people photos. Domain shift to real-world phone photography is expected and represents a natural limitation of the dataset, not the architecture. Retraining on a more diverse dataset like FaceForensics++ would address this."
+
 ## 🧪 Test the Model — Google Colab Demo
 
 No installation needed. Just open and run:
