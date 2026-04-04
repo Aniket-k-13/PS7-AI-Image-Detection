@@ -19,7 +19,8 @@ Upload any image and get an instant prediction with confidence score.
 
 ---
 
-##download Model
+## download Model
+
 the model Size is over the limit of github so we are not able to add it to repository, U can downlaod the the model using the link provided below
 [link to download model:https://drive.google.com/file/d/1N_4mZUGXTMa_8nbbAJswuUtrLHKxgM_m/view?usp=sharing]
 
