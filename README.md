@@ -15,7 +15,7 @@
 
 No installation needed. Just open and run:
 
-👉 **[Open Demo Notebook in Colab](https://drive.google.com/file/d/143tXRwb6RR6MIuiRiXSSXCWuIqE_6PBY/view?usp=sharing)**
+👉 **[Open Demo Notebook in Colab](https://colab.research.google.com/drive/143tXRwb6RR6MIuiRiXSSXCWuIqE_6PBY#scrollTo=CRCGHJlaVlSi)**
 
 Steps:
 1. Runtime → Change runtime type → T4 GPU
