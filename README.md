@@ -36,7 +36,7 @@ Model downloads automatically (~364MB, ~1 min).
 ---
 ## Link to the dataset
 
-![CIFAKE: Real and AI-Generated Synthetic Images](https://www.kaggle.com/datasets/birdy654/cifake-real-and-ai-generated-synthetic-images?utm_source=chatgpt.com)
+**[CIFAKE: Real and AI-Generated Synthetic Images](https://www.kaggle.com/datasets/birdy654/cifake-real-and-ai-generated-synthetic-images?utm_source=chatgpt.com)**
 
 ## download Model
 
