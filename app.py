@@ -52,7 +52,7 @@ def load_model():
             m.eval()
             print(f"✅ Model loaded from {path}")
             return m
-    raise FileNotFoundError("model.pth not found in src/ or root")
+    raise FileNotFoundError("model.pth not found")
 
 model = load_model()
 
@@ -105,19 +105,35 @@ with gr.Blocks(title="AI Image Detector | Neural Nexus 2026") as demo:
     **Neural Nexus Hackathon 2026 — Problem Statement 7**
 
     Hybrid **EfficientNet-B0 + ViT-Base** | Accuracy: **98.58%** | F1: **0.9854** | AUC: **0.9989**
-
     > Beats the original CIFAKE paper (Bird & Lotfi, IEEE Access 2024) which achieved 92.98%
-
-    ⚠️ *Running on CPU — inference takes ~10 seconds per image*
     """)
 
+    # ---- HOW TO TEST ----
+    gr.Markdown("""
+    ---
+    ### 🧪 Try It Yourself — No Setup Needed!
+
+    This is our **live deployed model** — just upload any image and get an instant prediction!
+
+    **Two easy ways to test:**
+
+    🤖 **Test with AI images** — Go to any AI image generator like [Midjourney](https://midjourney.com), [DALL-E](https://openai.com/dall-e-3), or [Stable Diffusion](https://stablediffusionweb.com), generate any image, save it, and upload it here.
+
+    📷 **Test with real photos** — Take a few photos with your phone camera and upload them here.
+
+    The model will accurately tell you whether each image is **REAL** or **AI-GENERATED** along with a confidence score!
+    ---
+    """)
+
+    # ---- HOW IT WORKS ----
     with gr.Row():
-        gr.Markdown("**1️⃣ EfficientNet-B0** — Detects local texture artifacts, GAN noise, blurring")
-        gr.Markdown("**2️⃣ ViT-Base/16** — Detects global inconsistencies, wrong proportions")
-        gr.Markdown("**3️⃣ Fusion** — Combines both for 98.58% accuracy")
+        gr.Markdown("**1️⃣ EfficientNet-B0**\nDetects local texture artifacts — blurring, noise, GAN fingerprints")
+        gr.Markdown("**2️⃣ ViT-Base/16**\nDetects global inconsistencies — wrong proportions, context mismatches")
+        gr.Markdown("**3️⃣ Fusion Classifier**\nCombines both signals for 98.58% accuracy")
 
     gr.Markdown("---")
 
+    # ---- MAIN INTERFACE ----
     with gr.Row():
         with gr.Column(scale=1):
             image_input = gr.Image(type="pil", label="📤 Upload Image (JPG, PNG, WEBP)")
@@ -134,8 +150,9 @@ with gr.Blocks(title="AI Image Detector | Neural Nexus 2026") as demo:
         outputs=[result_text, confidence_bar, explanation]
     )
 
-    gr.Markdown("---")
+    # ---- MODEL STATS ----
     gr.Markdown("""
+    ---
     ### 📊 Model Comparison
 
     | Model | Accuracy | F1 | AUC |
@@ -149,6 +166,8 @@ with gr.Blocks(title="AI Image Detector | Neural Nexus 2026") as demo:
     **Dataset:** CIFAKE — 120,000 images | FAKE generated with Stable Diffusion v1.4
 
     **Citation:** Bird & Lotfi, *CIFAKE*, IEEE Access 2024. [DOI: 10.1109/ACCESS.2024.3356122](https://doi.org/10.1109/ACCESS.2024.3356122)
+
+    ⚠️ *Running on CPU — inference takes ~10 seconds per image*
     """)
 
     gr.Markdown("---")
