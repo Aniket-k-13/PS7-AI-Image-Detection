@@ -19,6 +19,10 @@ Upload any image and get an instant prediction with confidence score.
 
 ---
 
+##download Model
+the model Size is over the limit of github so we are not able to add it to repository, U can downlaod the the model using the link provided below
+[link to download model:https://drive.google.com/file/d/1N_4mZUGXTMa_8nbbAJswuUtrLHKxgM_m/view?usp=sharing]
+
 ## 📌 Problem Statement
 
 Advancements in generative AI (Stable Diffusion, Midjourney, DALL-E) have enabled the creation of photorealistic synthetic images indistinguishable from real photographs. This raises serious concerns about digital fraud, misinformation, and trust in visual media.
