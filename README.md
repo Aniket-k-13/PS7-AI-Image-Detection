@@ -12,6 +12,8 @@
 ## 🚀 Live Demo
 👉 https://huggingface.co/spaces/aniketkhandare/ai_image_detector
 
+This is our live deployed model — open the link and test it yourself! Upload any image to see if it's real or AI-generated. Try it two ways: go to any AI image generator (Midjourney, DALL-E, Stable Diffusion) and generate an image, then upload it to our model. Or take a few photos with your phone camera and upload those. The model will accurately tell you whether each image is **REAL** or **AI-GENERATED** along with a confidence score. No setup needed — just open the link and upload.
+
 ## 🧪 Test the Model — Google Colab Demo
 
 No installation needed. Just open and run:
@@ -21,7 +23,8 @@ No installation needed. Just open and run:
 Steps:
 1. Runtime → Change runtime type → T4 GPU
 2. Run all cells in order
-3. Upload any image in Cell 3 (u can use any image to test the model just go to any ai platform genrate any image and give it our model, also u can take few random photos from ur phone camera and give it to our model, it will accuratel detectect if the image is real or ai genrated}
+3. Upload any image in Cell 3
+           This is our live deployed model — open the link and test it yourself! Upload any image to see if it's real or AI-generated. Try it two     ways: go to any AI image generator (Midjourney, DALL-E, Stable Diffusion) and generate an image, then upload it to our model. Or take a few       photos with your phone camera and upload those. The model will accurately tell you whether each image is **REAL** or **AI-GENERATED** along       with a confidence score. No setup needed — just open the link and upload.
 4. Get instant prediction!
 
 Model downloads automatically (~364MB, ~1 min).
