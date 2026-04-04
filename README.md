@@ -20,7 +20,7 @@ No installation needed. Just open and run:
 Steps:
 1. Runtime → Change runtime type → T4 GPU
 2. Run all cells in order
-3. Upload any image in Cell 3 (u can use any image to text the model just go to any ai platform genrate any image and give it our model, also u can take few random photos from ur phone camera and give it to our model, it will accuratel detectect if the image is real or ai genrated}
+3. Upload any image in Cell 3 (u can use any image to test the model just go to any ai platform genrate any image and give it our model, also u can take few random photos from ur phone camera and give it to our model, it will accuratel detectect if the image is real or ai genrated}
 4. Get instant prediction!
 
 Model downloads automatically (~364MB, ~1 min).
