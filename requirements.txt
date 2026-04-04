@@ -1,6 +1,8 @@
-streamlit==1.28.0
+streamlit
 torch
+torchvision
 timm
+Pillow
 numpy
-opencv-python-headless
-gdown
+scikit-learn
+matplotlib
