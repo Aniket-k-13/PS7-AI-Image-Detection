@@ -15,7 +15,7 @@
 
 Upload any image and get an instant prediction with confidence score.
 
-> ⚠️ First load may take ~60 seconds as the model initializes.
+Note: deployment is still in process but the side of model is huge the free tier cpu and ram is not enough to host the model, we have to say regratelly we are not host it now 
 
 ---
 
