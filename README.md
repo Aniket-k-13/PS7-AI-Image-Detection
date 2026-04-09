@@ -43,7 +43,7 @@ Model downloads automatically (~364MB, ~1 min).
 ## download Model
 
 the model Size is over the limit of github so we are not able to add it to repository, U can downlaod the the model using the link provided below
-[link to download model]:https://drive.google.com/file/d/1N_4mZUGXTMa_8nbbAJswuUtrLHKxgM_m/view?usp=sharing]
+[link to download model]:https://drive.google.com/file/d/1N_4mZUGXTMa_8nbbAJswuUtrLHKxgM_m/view?usp=sharing
 
 ## 📌 Problem Statement
 
