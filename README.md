@@ -21,6 +21,7 @@ This is our live deployed model — open the link and test it yourself! Upload a
 
 ## 🧪 Test the Model — Google Colab Demo
 
+
 No installation needed. Just open and run:
 
 👉 **[Open Demo Notebook in Colab](https://colab.research.google.com/drive/143tXRwb6RR6MIuiRiXSSXCWuIqE_6PBY#scrollTo=CRCGHJlaVlSi)**
@@ -36,6 +37,7 @@ Model downloads automatically (~364MB, ~1 min).
 
 ---
 ## Link to the dataset
+
 
 **[CIFAKE: Real and AI-Generated Synthetic Images](https://www.kaggle.com/datasets/birdy654/cifake-real-and-ai-generated-synthetic-images?utm_source=chatgpt.com)**
 
